@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border);
-  padding: 0 150px;
+  padding: 0 var(--paddingValue);
 `;
 export const Logo = styled.div`
   width: fit-content;
@@ -59,6 +59,7 @@ export const UsermenuContent = styled.div`
   height: fit-content;
   width: 350px;
   border-radius: 15px;
+  padding: 15px 0;
   position: absolute;
   right: 0;
   top: 55px;
@@ -68,9 +69,7 @@ export const UsermenuContent = styled.div`
   transform: ${(props) => (props.open ? "scale(1)" : "scale(0)")};
   border: 1px solid var(--border);
   > div {
-    height: fit-content;
     width: 100%;
-    border-bottom: 1px solid var(--border);
   }
 `;
 export const Menuitems = styled.div`
@@ -84,4 +83,9 @@ export const Menuitems = styled.div`
   &:hover {
     background: var(--hoverbg);
   }
+`;
+export const Seperator = styled.div`
+  height: 1px;
+  width: 100px;
+  background: var(--border);
 `;

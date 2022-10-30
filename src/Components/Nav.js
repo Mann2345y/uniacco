@@ -48,6 +48,7 @@ const Nav = () => {
               <h4>Log In</h4>
             </Styles.Menuitems>
           </div>
+          <Styles.Seperator />
           <div>
             <Styles.Menuitems onClick={() => setOpenMenu(false)}>
               <h4>Host your home</h4>

@@ -5,6 +5,7 @@
   --border: #dddddd;
   --shadow: #aaaaaa;
   --hoverbg: #eeeeee;
+  --paddingValue: 150px;
 }
 * {
   margin: 0;
@@ -12,7 +13,9 @@
   box-sizing: border-box;
 }
 body {
+  padding-bottom: 80px;
   background: var(--bg);
+  overflow-x: hidden;
 }
 h1,
 h2,
