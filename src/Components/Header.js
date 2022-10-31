@@ -5,10 +5,11 @@ import { useSwipeable } from "react-swipeable";
 
 const Header = () => {
   const cardImages = ["banner1.jpg", "banner2.jpg", "banner3.jpg"];
+  const dummy = new Array(5).fill(0);
   const [pos, setPos] = useState(0);
   const handlers = useSwipeable({
-    onSwipedLeft: () => onLeft(),
-    onSwipedRight: () => onRight(),
+    onSwipedLeft: () => onRight(),
+    onSwipedRight: () => onLeft(),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
@@ -25,7 +26,7 @@ const Header = () => {
   return (
     <Styles.Wrapper>
       <h1>News This Week</h1>
-      <Styles.CardsBlock {...handlers}>
+      <Styles.CardBlock {...handlers}>
         {cardImages.map((item, index) => (
           <Styles.CardWrapper
             key={index}
@@ -33,7 +34,7 @@ const Header = () => {
             img={item}
           ></Styles.CardWrapper>
         ))}
-      </Styles.CardsBlock>
+      </Styles.CardBlock>
       <button onClick={onLeft}>
         <h2>Prev</h2>
       </button>
