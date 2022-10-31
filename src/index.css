@@ -5,7 +5,7 @@
   --border: #dddddd;
   --shadow: #aaaaaa;
   --hoverbg: #eeeeee;
-  --paddingValue: 150px;
+  --paddingValue: 10%;
 }
 * {
   margin: 0;

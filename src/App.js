@@ -6,10 +6,10 @@ import SectionTwo from "./Components/SectionTwo";
 function App() {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Header />
-      <Filters />
-      <SectionTwo />
+      {/* <Filters /> */}
+      {/* <SectionTwo /> */}
     </>
   );
 }
