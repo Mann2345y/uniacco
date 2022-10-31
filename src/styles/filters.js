@@ -8,25 +8,19 @@ export const Wrapper = styled.div`
   align-items: center;
   > div {
     display: flex;
-    > div {
-      height: 35px;
-      min-width: fit-content;
-      padding: 0 25px;
-      border-radius: 25px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 15px;
+  }
+  @media (max-width: 968px) {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 `;
 export const Leftblock = styled.div`
   height: fit-content;
   width: 430px;
-  > div {
-    border: 1px solid #505050;
-    background: var(--bg);
+  @media (max-width: 968px) {
+    min-width: 430px;
   }
 `;
 export const Rightblock = styled.div`
@@ -37,13 +31,15 @@ export const Rightblock = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  > div {
-    border: 1px solid var(--border);
-    background: var(--border);
+  @media (max-width: 968px) {
+    min-width: 450px;
   }
 `;
 export const Seperator = styled.div`
   height: 50px;
   width: 2px;
   background: var(--border);
+  @media (max-width: 968px) {
+    min-width: 2px;
+  }
 `;

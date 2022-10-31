@@ -41,6 +41,8 @@ export const Content = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  scroll-behavior: smooth;
+  transition: all 0.2s ease-in;
 `;
 export const CardWrapper = styled.div`
   height: fit-content;

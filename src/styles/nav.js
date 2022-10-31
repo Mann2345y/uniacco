@@ -68,8 +68,12 @@ export const UsermenuContent = styled.div`
   transform-origin: top right;
   transform: ${(props) => (props.open ? "scale(1)" : "scale(0)")};
   border: 1px solid var(--border);
+  z-index: 5;
   > div {
     width: 100%;
+  }
+  @media (max-width: 425px) {
+    width: 250px;
   }
 `;
 export const Menuitems = styled.div`

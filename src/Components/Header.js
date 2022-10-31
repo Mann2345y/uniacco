@@ -14,45 +14,33 @@ const Header = () => {
     trackMouse: true,
   });
   const onRight = () => {
-    if (pos < cardImages.length - 1) {
+    if (pos < cardImages.length - 1 && window.innerWidth < 986) {
       setPos(pos + 1);
     }
   };
   const onLeft = () => {
-    if (pos > 0) {
+    if (pos > 0 && window.innerWidth < 986) {
       setPos(pos - 1);
     }
   };
   return (
     <Styles.Wrapper>
       <h1>News This Week</h1>
-      <Styles.CardBlock {...handlers}>
+      <Styles.CardsBlock {...handlers}>
         {cardImages.map((item, index) => (
-          <Styles.CardWrapper
-            key={index}
-            left={(index - pos) * 550}
-            img={item}
-          ></Styles.CardWrapper>
+          <Styles.CardWrapper key={index} left={(index - pos) * 82} img={item}>
+            <div>
+              <h6>COLLECTION</h6>
+              <h3>Fun for The Family</h3>
+            </div>
+            <Styles.Cardbutton>
+              <h5>Show Me</h5>
+            </Styles.Cardbutton>
+          </Styles.CardWrapper>
         ))}
-      </Styles.CardBlock>
-      <button onClick={onLeft}>
-        <h2>Prev</h2>
-      </button>
-      <button onClick={onRight}>
-        <h2>Next</h2>
-      </button>
+      </Styles.CardsBlock>
     </Styles.Wrapper>
   );
 };
 
 export default Header;
-
-{
-  /* <div>
-                  <h6>COLLECTION</h6>
-                  <h3>Fun for The Family</h3>
-                </div>
-                <Styles.Cardbutton>
-                  <h5>Show Me</h5>
-                </Styles.Cardbutton> */
-}

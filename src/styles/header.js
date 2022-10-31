@@ -15,14 +15,24 @@ export const CardsBlock = styled.div`
   height: 400px;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  margin: 25px 0;
+  @media (max-width: 986px) {
+    overflow: hidden;
+    display: block;
+  }
 `;
 export const CardWrapper = styled.div`
   height: 400px;
   min-width: 500px;
   margin: 0 25px;
-  position: absolute;
-  left: ${(props) => props.left}px;
+  position: none;
+  left: ${(props) => props.left}vw;
   border-radius: 25px;
   padding: 25px;
   color: white;
@@ -37,7 +47,8 @@ export const CardWrapper = styled.div`
     font-weight: 700;
   }
   @media (max-width: 986px) {
-    min-width: 80%;
+    min-width: 90%;
+    position: absolute;
   }
 `;
 export const Cardone = styled(CardWrapper)`
